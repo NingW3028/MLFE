@@ -1,0 +1,9 @@
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+tqdm
+scipy>=1.10.0
+easydict
+Pillow
+# Optional (accuracy query with --api_path):
+# nas-bench-201
