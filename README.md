@@ -1,5 +1,12 @@
 # Neural Architecture Selection via Maximizing Local Entropy of Feature Maps
 
+> [!IMPORTANT]
+> **Errata:** The aggregation formula `v = ln(max(Δ)) · Σ(r)` shown in the manuscript is an early version. All experiments in the paper were conducted using the updated formula:
+>
+> **`v = max(Δ) · Σ(r)`**
+>
+> The formula in the manuscript was not updated accordingly. **The code in this repository reflects the correct version used in all experiments.** This change does not affect any conclusions or experimental results reported in the paper. The formula in the manuscript will be corrected in the next revision.
+
 This repository provides the code for evaluating and searching neural architectures using zero-cost proxies, including our proposed MLFE (Mixed-Granularity Local Feature Entropy) proxy. The project covers three NAS benchmarks — NAS-Bench-101, NAS-Bench-201, and DARTS (NAS-Bench-301 / EvoxBench) — and extends to Vision Transformer search spaces via AutoFormer.
 
 The codebase is organized into multiple subprojects, each targeting a specific benchmark and task (proxy evaluation or proxy-guided local search). Every subproject contains its own detailed README with full usage instructions, environment setup, and data preparation guides.

@@ -219,7 +219,7 @@ def get_score(net, x, device, dtype,split_data,benchtype='tss',dataset='cifar10'
                 break
             diff_list.append(diff)
         diff_list=torch.tensor(diff_list)
-        v = np.log(torch.max(diff_list))*torch.sum((results))  # L_A is a constant across architectures, thus omitted
+        v = (torch.max(diff_list))*torch.sum((results)) # L_A is a constant across architectures, thus omitted
         
     else:
         v = torch.tensor(0,dtype=dtype)

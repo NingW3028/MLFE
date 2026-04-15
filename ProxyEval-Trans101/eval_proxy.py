@@ -159,7 +159,7 @@ def _aggregate_score(layer_sums):
             diff_list.append(diff)
         if len(diff_list) > 0:
             diff_t = torch.tensor(diff_list)
-            v = np.log(max(torch.max(diff_t).item(), 1e-10)) * torch.sum(results).item()
+            v = max(torch.max(diff_t).item(), 1e-10) * torch.sum(results).item()
         else:
             v = torch.sum(results).item()
     else:

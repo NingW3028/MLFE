@@ -250,7 +250,7 @@ def get_score_ablation(net, x, device, dtype, split_data,
                 break
             diff_list.append(diff)
         diff_list = torch.tensor(diff_list)
-        v = np.log(torch.max(diff_list)) * torch.sum((results))
+        v = torch.max(diff_list)*torch.sum((results))
     else:
         v = torch.tensor(0, dtype=dtype)
 
