@@ -1,9 +1,9 @@
 # Neural Architecture Selection via Maximizing Local Entropy of Feature Maps
 
 > [!IMPORTANT]
-> **Errata:** The aggregation formula `v = ln(max(Δ)) · Σ(r)` shown in the manuscript is an early version. All experiments in the paper were conducted using the updated formula:
+> **Errata:** The aggregation formula `v = ln(max(ΔH)) · mean(H)` in Equation (5) of the manuscript is an early version. All experiments in the paper were conducted using the updated formula:
 >
-> **`v = max(Δ) · Σ(r)`**
+> **`v = max(ΔH) · Σ(H)`**
 >
 > The formula in the manuscript was not updated accordingly. **The code in this repository reflects the correct version used in all experiments.** This change does not affect any conclusions or experimental results reported in the paper. The formula in the manuscript will be corrected in the next revision.
 
